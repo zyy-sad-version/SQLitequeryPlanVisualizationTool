@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Plan Visualised Tool</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+<body>
+
+<div id="sidebar">
+    <br>
+    <br>
+    <button id="sidebar-btn" onclick="redirectToMainPage()">Main</button><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="sidebar-btn" onclick="redirectToDBPage()">DB</button><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+<div id="header">
+    <h1>SQLite Query Visualised Tool</h1>
+</div>
+<div id = upload-container>
+    <p id= "input-bar" >
+        <input type="text" id="input-text" placeholder="example sql: select * from student_catalog inner join module_catalog on student_catalog.studentID = module_catalog.studentID;" onkeydown="enterSQLcommand(event)" >
+        *Please Press the Button From TOP to END *Please Refresh If You Want To Input Another Query
+    </p>
+
+    <div id="upload-content">
+
+        <button id="refresh-button" onclick="window.location.reload();">Refresh</button>
+        <button id="upload-button" onclick="openFileUploader()">Upload Database</button>
+
+        <input type="file" id="file-input" onchange="handleFileUpload()" />
+
+    </div>
+</div>
+
+
+</div>
+
+<div id="main-content">
+
+    <div>
+        <!-- <h5>Visualised Window</h5> -->
+        <div id = 'visualization-container'>
+<!--            <canvas id = 'mycanvas'></canvas>-->
+        </div>
+
+        <div  id="visualization-area">
+
+        </div>
+
+
+
+    </div>
+    <div>
+        <h4 id="current-db-name"></h4>
+        <h5 id="current-table-name"></h5>
+        <div id="database-container">
+            <table id= 'database-table'>
+            </table>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+<script src = "static/lib/three.js">
+
+</script>
+<script src = "static/js/visualizationJS.js"></script>
+<script src="static/js/btnScript.js"></script>
+<script src="static/js/mainPageScript.js"></script>
+
+</body>
+</html>

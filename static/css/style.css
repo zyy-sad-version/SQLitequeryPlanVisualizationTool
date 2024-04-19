@@ -1,0 +1,205 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light Grey */
+}
+
+#header {
+    background-color: #5d4bfd; /* Blue */
+    color: #ffffff; /* White */
+    padding: 10px;
+    text-align: center;
+}
+
+
+#input-bar {
+
+    width: 1300px;
+    background-color: #ecf0f1; /* Light Grey */
+    padding: 10px;
+    margin: 10px; /* Add margin for spacing */
+    border-radius: 5px; /* Add rounded corners */
+    float: right;
+}
+
+#input-text {
+    width: 100%; /* Make the input take up the full width of the #input-bar */
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #3498db; /* Blue border */
+    border-radius: 3px; /* Add rounded corners */
+    outline: none; /* Remove default focus outline */
+
+}
+
+/* Optional: Add a hover effect to the input */
+#input-text:hover {
+    border: 1px solid #2980b9; /* Darker blue border on hover */
+}
+
+#sidebar {
+    width: 6%;
+    background-color: #78bbff; /* Light Grey */
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+    height: 100vh;
+    position: fixed;
+    border-radius: 10px;
+}
+
+#main-content {
+    background-color: #cbeaff; /* Blue */
+    width: 94%;
+    padding: 20px;
+    box-sizing: border-box;
+    float: right;
+    display: flex; /* Add flex display to place items in the same line */
+    height: 100vh;
+
+
+}
+#database-container{
+    width: 90%;
+    height: 80%;
+    overflow: scroll;
+    border: 5px solid transparent;
+    display: inline-block; /* 使容器大小适应内容 */
+    margin-right: 10px;
+
+}
+#table1-container{
+    width: 90%;
+    height: 20%;
+    overflow: scroll;
+    float: right;
+}
+#table2-container{
+    width: 90%;
+    height: 20%;
+    overflow: scroll;
+    float :right;
+}
+#join-one{
+    background-color: #cbeaff;
+    color: #3498db;
+    text-align: center;
+    padding: 10px;
+    /* border: 5px solid rgb(0, 0, 0); */
+    width: 100%;
+    height: 15px;
+}
+
+#join-two{
+    background-color: #cbeaff;
+    color: #3498db;
+    text-align: center;
+    padding: 10px;
+    /* border: 5px solid rgb(0, 0, 0); */
+    width: 100%;
+    height: 15px;
+}
+
+#main-content > div {
+    flex: 1; /* Distribute available space equally between the two content areas */
+}
+
+#upload-button {
+    background-color: #3498db; /* Blue */
+    color: #ffffff; /* White */
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-right: 200px;
+}
+#refresh-button{
+    background-color: #3498db; /* Blue */
+    color: #ffffff; /* White */
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 200px;
+
+}
+
+#pagination-button{
+    background-color: #3498db; /* Blue */
+    color: #ffffff; /* White */
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+
+#upload-content {
+    width: 80%;
+    float: left;
+    text-align: center;
+}
+
+#file-input {
+    display: none;
+}
+
+#sidebar-btn{
+    background-color: #3498db;
+    color: #ffffff;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+#database-table{
+    background-color: #ffffff;
+    color: #3498db;
+    text-align: center;
+    padding: 10px;
+    /* border: 5px solid rgb(0, 0, 0); */
+    width: 100%;
+    height: 15px;
+
+}
+
+
+
+#visualisation-canvas {
+    border:5px solid #61adfd;
+    width: 100%;
+    height: 90%;
+    background-color: #f0f9ff;
+    text-rendering: optimizeLegibility;
+}
+
+.highlight {
+    background-color: rgb(255, 255, 0);
+}
+.removehightlight{
+    background-color:transparent;
+}
+.greenhighlight{
+    background-color: #00ff33;
+}
+#current-db-name,
+#current-table-name {
+    display: inline;
+    margin-right: 20px; /* Adjust spacing between the elements */
+}
+
+canvas {
+    display: block;
+    width: 40vw; /* 让 canvas 元素填充整个视口 */
+    height: 50vh;
+}
+
+#visualization-container {
+
+    margin-top: 20px;
+}
